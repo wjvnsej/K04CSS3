@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04Paragraph.html</title>
+</head>
+<body>
+    
+    <!-- 
+        수평방향에서의 정렬
+            블럭엘리먼트 : 컨텐츠의 양에 상관없이 하나의 블럭을
+                차지하게되므로 우측에 공간이 충분하여 컨텐츠는 우측정렬된다.
+            인라인엘리먼트 : 컨텐츠의 크기만큼만 영역을 차지하므로 컨텐츠가
+                움직일 공간이 없어 정렬되지 않는다. 만약 정렬해야 한다면
+                부모엘리먼트에서 text-align을 설정한다.
+     -->
+    <h2>문단관련 CSS 속성들</h2>
+    <div style="border: 1px blue dotted; width: 400px;"><!-- text-align: right -->
+        <h2>컨텐츠 수평방향 정렬</h2>
+        <div style="border: 1px solid red; text-align: right ;">
+            블록엘리먼트
+        </div>
+        <span style="border: 1px solid blue; text-align: right;">
+            인라인엘리먼트
+        </span>
+    </div>
+
+    <!-- 
+        line-height : 줄 간격. 즉 라인 사이의 간격을 띄우는데
+            블럭과 인라인은 조금 다르게 적용된다.
+            Block : 컨텐츠의 영역 중 세로영역이 늘어나서 마치 줄 간격이
+                생긴것 같은 효과가 나타난다.
+            Inline : 컨텐츠의 영역은 크기의 변화가 없지만, 지정된
+                사이즈 만큼 줄 간격이 생겨 사이가 벌어진다.
+     -->
+    <h3>줄 사이의 간격</h3>
+    <h4 style="line-height: 5em; border: 1px solid;">
+        블럭엘리먼트1에 줄간격 적용
+    </h4>
+    <h4 style="border: 1px solid black;" >블럭엘리먼트2</h4>
+    <h4 style="border: 1px solid black;" >블럭엘리먼트3</h4>
+
+    <div class="inline">
+        <span style="line-height: 5em; border: 1px solid black;">
+            인라인엘리먼트1</span><br>
+        <span style="border: 1px solid black;">인라인엘리먼트2</span><br>
+        <span style="border: 1px solid black;">인라인엘리먼트3</span>
+    </div>
+
+
+    <h3>수직상태에서의 가운데 정렬</h3>
+
+    <!-- 
+        div박스의 height와 ling-height의 값을 동일하게 지정하면
+        세로상태에서 가운데정렬이 된다.
+     -->
+    <h4>블럭엘리먼트 사용시 방법1</h4>
+    <div style="border: 1px solid black; height: 200px; width: 200px;
+        line-height: 200px;">
+        나는 텍스트1
+    </div>
+    
+    <!-- 
+        div박스 내부의 padding을 줘서 텍스트를 아래로 밀어준다.
+        이 경우 박스의 세로영역이 늘어나므로 사이즈는 별도로
+        조절해줘야 한다.
+     -->
+    <h4>블럭엘리먼트 사용시 방법2</h4>
+    <div style="border: 1px solid red; height: 100px; width: 200;
+        padding-top: 100px;">
+        나는 텍스트2
+    </div>
+
+    <!-- 
+        인라인엘리먼트에서 세로상태의 가운데 정렬을 위해서는
+        vertical-align을 사용한다.
+     -->
+    <h4>인라인엘리먼트 사용시</h4>
+    <table border="1" width = "300">
+        <tr>
+            <td style="height: 100px; vertical-align: top;">인라인엘리먼트
+                세로정렬</td>
+        </tr>
+        <tr>
+            <td style="height: 100px; vertical-align: middle;">인라인엘리먼트
+                세로정렬</td>
+        </tr>
+        <tr>
+            <td style="height: 100px; vertical-align: bottom;">인라인엘리먼트
+                세로정렬</td>
+        </tr>
+
+    </table>
+
+
+    <h2>배분정렬</h2>
+    <p style="border: 1px solid blue; text-align: justify; ">
+        인터넷 메신저 텔레그램에서 미성년자를 포함한 여성들의 성 착취물을 제작 및 유포한 혐의를 받는 '박사방' 운영자 조주빈(25)이 지난 3월25일 서울 종로구 종로경찰서 유치장에서 검찰로 송치되고 있다. 2020.3.25/뉴스1 © News1 송원영 기자
+        (서울=뉴스1) 이상학 기자 = 성착취 영상을 제작하고 텔레그램 '박사방'과 'n번방' 유료회원 40여명의 명단이라는 주장과 함께 신상정보가 담긴 파일이 사회관계망서비스(SNS)에 유포되고 있어 논란이 예상된다.
+        <br><br>
+        해당 파일이 수사기관을 통해 공개된 것이 아니라 출처가 불분명한 만큼 신상이 공개된 이들의 2차 피해도 우려되고 있다.
+        <br><br>
+        8일 카카오톡 등 SNS상에는 'n번방 유료회원결제 리스트'라는 이름의 PDF 파일이 퍼지고 있다.
+        <br><br>
+        이 파일에는 '텔레그램 n번방 유료 결제한 사람들 list 목록'이라는 제목과 함께 40여명의 사진과 이름, 연락처, 계좌번호, 직업 등 신상정보가 적혀있다.
+        <br><br>
+        이 정보는 자신들을 '자경단'이라고 설명하는 텔레그램 '주홍글씨' 방에서 공유된 자료를 캡처한 것으로 전해진다. 다만 주홍글씨 측에서는 "제작한 바 없다"고 부인하고 있는 상태다.
+        <br><br>
+        자경단은 독일을 기반으로 하는 암호화 이메일 서비스 투나노타(tunanota)를 통해 관련자 제보를 받으면서 n번방 연루자들을 추적하고, 주홍글씨방에 이를 공유하고 있다.
+        <br><br>
+        이들은 제보자와의 대화 등을 통해 해당 인물이 n번방 연루자로 판단되면 신상정보를 공개하고 있다고 주장하고 있다. 하지만 공식적인 수사를 통해 밝혀진 내용이 아니기 때문에 오히려 억울한 피해자가 생길 우려도 큰 상황이다.
+        <br><br>
+        전문가들은 해당 파일을 만든 것은 물론 이 파일을 제3자에게 공유하는 행위도 문제의 소지가 있다고 지적한다.
+        <br><br>
+        곽대경 동국대 경찰행정학과 교수는 "사회적 명분이나 분노 등 이유가 있다고 하더라도 공식적인 수사기관이 아닌 개인이 또 다른 개인의 정보를 노출시키는 것은 문제가 될 수 있다"며 "이 파일을 받아서 전달하는 행위 역시 타인의 개인정보를 또 다른 사람에게 노출 시키는 것이라서 문제의 소지가 있다"고 지적했다.
+        <br><br>
+        앞서 경찰도 무차별적으로 신상정보를 공개하고 있는 자경단에 대해서도 수사 대상이라고 밝힌 바 있다.
+        <br><br>
+    </p>
+
+    <!-- 
+    text-indent : 문단에서 들여쓰기 할 때 사용한다.
+        Block : 첫 번째줄의 문장이 지정한 만큼 들여쓰기 된다.
+        Inline : 컨텐츠 영역의 잔여공간이 없으므로 들여쓰기
+            되지 않는다. 이때 부모엘리먼트에서 padding을 통해
+            밀어줘야 한다.
+     -->
+    <h2>들여쓰기</h2>
+    <div style="border: 1px solid red; text-indent: 1em;">
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    </div>
+    <div style="border: 1px solid blue; padding-left: 10px;">
+        <span style="text-indent: 1em;">
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        </span>
+    </div>
+
+</body>
+</html>
