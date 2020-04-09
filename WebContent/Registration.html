@@ -6,49 +6,296 @@
     <title>Registration.html</title>
 
     <style>
+        table {
+            width: 50%;
+            border-spacing: 10px;
+            font-size: 14px;
+        }
+        table.sub {
+            background-color: #F5F5F5;
+        }
+        td {
+            width: 30px;
+        }
+        select {
+            height: 30px; width: 90px; font-size: 10px;
+        }
+        span {
+            color: gray; font-size: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 32%;
+        }
+        #title {
+            color: red;
+            font-size: 16px;
+        }
+        #input {
+            width: 150px;
+            height: 25px;
+        }
+        #phone {
+            width: 80px; height: 25px;
+        }
+        #birth, #addr {
+            width: 120px; height: 25px;
+        }
+        #id_check, #addr_serch, #submit {
+            color: white;
+            font-size: 12px;
+            background-color: #00AFA0;
+            width: 100px;
+            height: 35px;
+        }
 
     </style>
 
 </head>
 <body>
     
-    <h3>회원정보 <span style="color: red;">(필수)</span></h3>
-	<form action="" method="post">
+    
+	<form action="" method="post"></form>
+        <table>
 
-        아이디<input type="text" name="user_id" 
-            placeholder="4자리 이상" > 
-        <input type="button" value="아이디중복확인">
-        <span style="color: red; font-size: 10px;">
-            아이디 형식에 맞춰주세요(영문,숫자 조합 4문자 이상)</span>
-        <br />
+            <tr>
+                <td>
+                    <h3>회원정보 <span id="title">(필수)</span></h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="user_id" id="input" placeholder="4자리 이상"> 
+                    <input type="button" id="id_check" value="아이디중복확인">
+                    <span>
+                    아이디 형식에 맞춰주세요(영문,숫자 조합 4문자 이상)</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="text" name="user_pwd" id="input" >
+                    <span>
+                    8~20자리의 영문, 숫자 조합(영문,숫자,특수 기호 조합을 권장합니다.)</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호확인</td>
+                <td>
+                    <input type="text" name="user_pwd_ck" id="input" >
+                </td>
+            </tr>
+
+            <tr>
+                <td>이름</td>
+                <td>
+                    <input type="text" name="user_name" id="input" >
+                </td>
+            </tr>
+
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="user_gender" id="radio"
+                        value="man" checked="checked">남성
+                    <input type="radio" name="user_gender" 
+                        value="woman">여성
+                </td>
+            </tr>
+
+            <tr>
+                <td>생년월일</td>
+                <td>
+                    <input type="date" name="user_birth" id="birth">
+                    <input type="radio" name="cal" 
+                        value="sun" checked="checked">양력
+                    <input type="radio" name="cal" 
+                        value="moon">음력
+                </td>
+            </tr>
+
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="user_mail" id="input" > @ 
+                    <input type="text" name="user_mail" id="input" >
+                    <select name="domain" >
+                        <option value="nate" >nate.com</option>
+                        <option value="naver" >naver.com</option>
+                        <option value="daum" >daum.net</option>
+                        <option value="google" >gmail.com</option>
+                        <option value="google" >yahoo.com</option>
+                    </select>
+                    <br>
+                    <span>
+                        이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다.
+                        <br>
+                        수신동의 거부 시에도 기본서비스(주문배송 메일)는 발송됩니다.
+                    </span>
+                    <input type="radio" name="user_agree1"  
+                        value="yes1" checked="checked">예
+                    <input type="radio" name="user_agree1" 
+                        value="no1">아니오
+                </td>
+            </tr>
+
+            <tr>
+                <td>휴대전화</td>
+                <td>
+                    <input type="tel" name="user_phone1" id="phone">-
+                    <input type="text" name="user_phone1" id="phone">-
+                    <input type="text" name="user_phone1" id="phone">
+                    <br>
+                    <span>
+                        할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다.
+                        <br>
+                        수신동의 거부 시에도 기본서비스는 발송됩니다.
+                    </span>
+                    <input type="radio" name="user_agree2"  
+                        value="yes2" checked="checked">예
+                    <input type="radio" name="user_agree2" 
+                        value="no2">아니오
+                </td>
+            </tr>            
+
+        </table>
         
-        비밀번호<input type="text" name="user_pwd" >
-        <span style="color: gray; font-size: 10px;">
-            8~20자리의 영문, 숫자 조합(영문,숫자,특수 기호 조합을 권장합니다.)</span>
-        <br />
+        <table class="sub">
+            
+            <tr>
+                <td>
+                    <h3>부가정보 <span id="title">(선택)</span></h3>
+                </td>
+            </tr>
 
-        비밀번호확인<input type="text" name="user_pwd_ck" >
-        <br>
+            <tr>
+                <td>일반전화</td>
+                <td>
+                    <input type="tel" name="user_phone2" id="phone">-
+                    <input type="text" name="user_phone2" id="phone">-
+                    <input type="text" name="user_phone2" id="phone">
+                </td>
+            </tr>
 
-        이름<input type="text" name="user_name" >
-        <br>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <input type="text" name="user_addr" id="addr">
+                    <input type="button" id="addr_serch" value="우편번호검색">
+                    <br>
+                    <input type="text" name="user_addr" id="addr">
+                    <input type="text" name="user_addr" id="addr" placeholder="상세주소"> 
+                </td>
+            </tr>
 
-        성별<input type="radio" name="user_gender" value="M" checked="checked">남성
-        <input type="radio" name="user_gender" value="W">여성
-        <br>
+            <tr>
+                <td>직업</td>
+                <td>
+                    <select name="job" >
+                        <option value="" selected disabled hidden >선택</option>
+                        <option value="student" >학생</option>
+                        <option value="teacher" >교사</option>
+                    </select>
+                </td>
+            </tr>
 
-        생년월일<input type="text" name="user_birth">
-        <input type="radio" name="cal" value="S" checked="checked">양력
-        <input type="radio" name="cal" value="L">음력
-        <br>
-        
-        이메일<input type="text" name="user_mail" > @ 
-        <input type="text" name="user_mail" >
-        <br>
+            
+
+            <tr>
+                <td>관심 브랜드</td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">한빛미디어
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">한빛아카데미
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">한빛비즈
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">한빛라이프
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">리얼타임 eBook
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">MAKE
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_brand" id="checkbox">한빛에듀
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>관심 분야</td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">프로그래밍 언어
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">웹
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">모바일
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">데이터베이스
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">네트워크/보안
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">IT자격증/수험서
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">OA/오피스
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">디자인
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">사진/예술
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">경제/경영
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">자기계발
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">인문/사회/과학
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">여행/취미
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user_interest" id="checkbox">가정/건강/유아
+                    </label>
+                    <br>
+                        <input type="checkbox" name="user_interest" id="checkbox">기타:
+                        <input type="text" name="user_interest" id="checkbox">
+                </td>
+            </tr>
+
+        </table>
+        <input type="submit" id="submit" value="회원가입하기" style="margin-left: 20%;">
 
 
-		<input type="submit" value="전송" >
-	</form>
+    </form>
+    
+    
 
 
 
