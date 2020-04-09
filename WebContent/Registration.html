@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration.html</title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+    
+    <h3>회원정보 <span style="color: red;">(필수)</span></h3>
+	<form action="" method="post">
+
+        아이디<input type="text" name="user_id" 
+            placeholder="4자리 이상" > 
+        <input type="button" value="아이디중복확인">
+        <span style="color: red; font-size: 10px;">
+            아이디 형식에 맞춰주세요(영문,숫자 조합 4문자 이상)</span>
+        <br />
+        
+        비밀번호<input type="text" name="user_pwd" >
+        <span style="color: gray; font-size: 10px;">
+            8~20자리의 영문, 숫자 조합(영문,숫자,특수 기호 조합을 권장합니다.)</span>
+        <br />
+
+        비밀번호확인<input type="text" name="user_pwd_ck" >
+        <br>
+
+        이름<input type="text" name="user_name" >
+        <br>
+
+        성별<input type="radio" name="user_gender" value="M" checked="checked">남성
+        <input type="radio" name="user_gender" value="W">여성
+        <br>
+
+        생년월일<input type="text" name="user_birth">
+        <input type="radio" name="cal" value="S" checked="checked">양력
+        <input type="radio" name="cal" value="L">음력
+        <br>
+        
+        이메일<input type="text" name="user_mail" > @ 
+        <input type="text" name="user_mail" >
+        <br>
+
+
+		<input type="submit" value="전송" >
+	</form>
+
+
+
+</body>
+</html>

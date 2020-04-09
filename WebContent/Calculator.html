@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator.html</title>
+
+    <style>
+        td {
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: #373737;
+            width: 25%;
+        }
+        table.cal {
+            background-color: #DDDDDD;
+            width: 400px; height: 350px;
+        }
+        #input {
+            background-color: #70C738;
+            text-align: right;
+            font-size: 40px;
+            font-weight: bold;
+            height: 80px;
+            border-radius: 10px;
+            padding-right: 10px;
+        }
+        #back {
+            background-color: #7B7B7B;
+            width: 50%;
+            font-size: 20px;
+        }
+        #reset {
+            background-color: #7B7B7B;
+            width: 50%;
+            font-size: 20px;
+        }
+        #operator {
+            background-color: #FA960A;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <table class="cal" style="border-spacing: 5px;">
+        <tr>
+            <td colspan="4" id="input" 
+                style="color: #373737; text-align: right;">
+                123+654</td>
+        </tr>
+        <tr>
+            <td colspan="2" id="back">BackSpace</td>
+            <td colspan="2" id="reset">C</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td id="operator">/</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td id="operator">x</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td id="operator">+</td>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>0</td>
+            <td>.</td>
+            <td id="operator">-</td>
+        </tr>
+    </table>
+
+</body>
+</html>
