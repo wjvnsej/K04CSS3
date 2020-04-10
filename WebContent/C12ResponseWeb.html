@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+    <style type="text/css">
+        /*전체선택자를 통해 문서의 기본스타일 지정*/
+        *{margin: 0; padding: 0; font-family: Verdana;}
+        
+        /*Block엘리먼트 자체에 대한 가운데 정렬을 위해 margin이 사용된다.*/
+        #AllWrap{
+            margin: 0 auto; text-align: center;
+        }
+        #PartWrap{
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+        #header{
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+        /*
+        <li>태그 기본 블릿을 제거한다.
+        overflow의 속성값
+            visible : 컨텐츠가 박스를 넘어가도 보임.
+            hidden : 박스를 벗어난 부분은 숨겨짐.
+            scroll : 컨텐츠와는 상관없이 무조건 스크롤바 생김.
+            auto : 컨텐츠의 상황에 따라 스크롤바 토글됨.
+        */
+        #nav ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        #nav ul li{
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px;
+            /*전체넓이에 패딩과 보더를 포함하여 지정함*/
+            box-sizing: border-box;
+        }
+        #ContentWrap #content > h2{
+            border-bottom: 1px #808080 solid;
+            font-size: 2em;
+        }
+        #content{
+            padding:20px;
+        }
+        #footer{
+            font-size: 2em; font-weight: bold;height: 100px;
+            line-height: 100px; text-align: center;
+            border:1px solid blue;
+        }
+        /*스크린의 크기가 640px이상일때(혹은 디바이스)에서의 보임설정*/
+        @media screen and (max-width: 640px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 2em; color:black;
+            }
+        }
+        /*스크린의 크기가 1000px이상 사이*/
+        @media screen and (min-width: 1000px){
+            #AllWrap{width: 80%;}
+            #content p{
+                font-size: 1em; color:green;
+            }
+        }
+        /*스크린의 크기가 641~999px 사이*/
+        @media screen and (min-width: 641px) and (max-width:999px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 1.5em; color:red;
+                background-color: black;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴1입니다</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="ContentWrap">
+            <div id="content">
+                <h2>오늘부터 사전투표 시작!</h2>
+                <p>
+                    오늘(10일)부터 내일(11일)까지 이틀 동안 21대 국회의원선거 사전투표가 실시됩니다. 대한민국 유권자라면 누구나 전국 3천508개 사전투표소 어느 곳에서나 투표할 수 있습니다.
+                    <br><br>
+                    투표시간은 오전 6시부터 오후 6시까지로, 별도의 신고 없이 본인의 주민등록증이나 여권, 운전면허증 등 신분증을 지참해 투표소로 가면 됩니다.
+                    <br><br>
+                    전국 사전투표소 위치는 중앙선거관리위원회 홈페이지(www.nec.go.kr)에서 확인할 수 있습니다.
+                    <br><br>
+                    자신의 선거구 밖에 있는 사전투표소에서 투표할 경우, 투표용지와 회송용 봉투를 함께 받는데, 기표한 투표지를 회송용 봉투에 넣어 투표함에 넣어야 합니다.
+                    <br><br>
+                    코로나19 확진 판정을 받아 전국 생활치료센터에 격리된 유권자의 경우, 센터에 설치된 특별사전투표소에서 투표할 수 있습니다.
+                    <br><br>
+                    특별사전투표소는 다수의 확진자와 의료 인력이 있는 서울·경기·대구·경북지역 내 8개 생활치료센터에 설치됐습니다. 운영시간은 사전투표 기간 이틀 중 하루, 5~8시간으로 투표소마다 다릅니다.
+                    <br><br>
+                    선관위는 유권자가 안심하고 투표할 수 있도록 사전투표 전날인 어제에 이어, 오늘 투표가 끝난 뒤에도 모든 투표소를 방역하기로 했습니다.
+                    <br><br>
+                    또, 투표소 입구에서부터 모든 유권자를 발열 체크하고, 체온이 37.5도 이상이거나 호흡기 증상이 있는 사람은 별도 설치된 임시 기표소에서 투표하도록 안내할 계획입니다.
+                    <br><br>
+                    투표소에서 모든 유권자는 비치된 소독제로 손을 소독한 후 위생장갑을 끼고 투표해야 합니다. 선관위는 이 밖에도 당일 마스크 착용과 1m 이상 거리 두기 등의 행동 수칙을 준수해줄 것을 요청했습니다.
+                
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+</body>
+</html>

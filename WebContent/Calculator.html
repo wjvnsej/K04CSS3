@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +16,14 @@
             background-color: #373737;
             width: 25%;
         }
+
         table.cal {
             background-color: #DDDDDD;
-            width: 400px; height: 350px;
+            width: 400px;
+            height: 350px;
+            border-spacing: 5px;
         }
+
         #input {
             background-color: #70C738;
             text-align: right;
@@ -27,29 +32,34 @@
             height: 80px;
             border-radius: 10px;
             padding-right: 10px;
+            color: #373737; 
+            text-align: right;
         }
+
         #back {
             background-color: #7B7B7B;
             width: 50%;
             font-size: 20px;
         }
+
         #reset {
             background-color: #7B7B7B;
             width: 50%;
             font-size: 20px;
         }
+
         #operator {
             background-color: #FA960A;
         }
     </style>
 
 </head>
+
 <body>
-    
-    <table class="cal" style="border-spacing: 5px;">
+
+    <table class="cal">
         <tr>
-            <td colspan="4" id="input" 
-                style="color: #373737; text-align: right;">
+            <td colspan="4" id="input" >
                 123+654</td>
         </tr>
         <tr>
@@ -83,4 +93,5 @@
     </table>
 
 </body>
+
 </html>
